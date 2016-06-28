@@ -23,6 +23,7 @@ namespace WindowsFormsApplication3
         // Configure length
         private void button1_Click(object sender, EventArgs e)
         {
+            errorLength.Visible = false;
             try
             {
                 rectLength = Double.Parse(this.inputLength.Text);
@@ -52,7 +53,8 @@ namespace WindowsFormsApplication3
                 }
                 else
                 {
-                    MessageBox.Show("You did not input a valid unit of measurement");
+                    errorLength.Text = "You did not input a valid unit of measurement";
+                    errorLength.Visible = true;
                 }
             }
             catch (Exception g)
@@ -60,21 +62,21 @@ namespace WindowsFormsApplication3
                 String message = "";
                 if (this.inputLength.Text.Equals(""))
                 {
-                    message += "You didn't input anything.\n";
+                    message += "You didn't input anything. ";
                 }
                 else if (isString(this.inputLength.Text))
                 {
-                    message += "Your input has a non-negative number\n";
+                    message += "Your input has a non-negative number. ";
                 }
-                message += "Please input a valid non-negative number";
-                MessageBox.Show(
-                    message + "\n" + g.Message
-                    );
+                message += "\nPlease input a valid non-negative number.";
+                errorLength.Text = message;
+                errorLength.Visible = true;
             }
         }
         // Configure width
         private void button2_Click(object sender, EventArgs e)
         {
+            errorWidth.Visible = false;
             try
             {
                 rectWidth = Double.Parse(this.inputWidth.Text);
@@ -104,7 +106,8 @@ namespace WindowsFormsApplication3
                 }
                 else
                 {
-                    MessageBox.Show("You did not input a valid unit of measurement");
+                    errorWidth.Text = "You did not input a valid unit of measurement";
+                    errorWidth.Visible = true;
                 }
             }
             catch (Exception g)
@@ -112,16 +115,15 @@ namespace WindowsFormsApplication3
                 String message = "";
                 if (this.inputWidth.Text.Equals(""))
                 {
-                    message += "You didn't input anything.\n";
+                    message += "You didn't input anything. ";
                 }
                 else if (isString(this.inputWidth.Text))
                 {
-                    message += "Your input has a non-negative number\n";
+                    message += "Your input has a non-negative number. ";
                 }
-                message += "Please input a valid non-negative number";
-                MessageBox.Show(
-                    message + "\n" + g.Message
-                    );
+                message += "\nPlease input a valid non-negative number.";
+                errorWidth.Text = message;
+                errorWidth.Visible = true;
             }
         }
 
@@ -203,10 +205,12 @@ namespace WindowsFormsApplication3
             outputArea.Text = area.ToString();
             outputPerimeter.Text = perimeter.ToString();
 
+            /*
             if (outputArea.Text.Equals("NaN") || outputPerimeter.Text.Equals("Nan"))
             {
-                MessageBox.Show("You didn't input anything. \nPlease input a valid length and width");
+                //MessageBox.Show("You didn't input anything. \nPlease input a valid length and width");
             }
+            */
 
             if (calced)
             {

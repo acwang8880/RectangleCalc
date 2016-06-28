@@ -46,6 +46,8 @@
             this.inputPerimeterUnit = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.errorLength = new System.Windows.Forms.Label();
+            this.errorWidth = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -77,7 +79,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 75);
+            this.label3.Location = new System.Drawing.Point(13, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 4;
@@ -85,7 +87,7 @@
             // 
             // inputWidth
             // 
-            this.inputWidth.Location = new System.Drawing.Point(54, 72);
+            this.inputWidth.Location = new System.Drawing.Point(54, 100);
             this.inputWidth.Name = "inputWidth";
             this.inputWidth.Size = new System.Drawing.Size(100, 20);
             this.inputWidth.TabIndex = 5;
@@ -102,7 +104,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(213, 69);
+            this.button2.Location = new System.Drawing.Point(213, 97);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(31, 23);
             this.button2.TabIndex = 7;
@@ -132,7 +134,7 @@
             "m",
             "cm",
             "mm"});
-            this.inputWidthUnit.Location = new System.Drawing.Point(161, 72);
+            this.inputWidthUnit.Location = new System.Drawing.Point(161, 100);
             this.inputWidthUnit.Name = "inputWidthUnit";
             this.inputWidthUnit.Size = new System.Drawing.Size(46, 21);
             this.inputWidthUnit.TabIndex = 9;
@@ -141,7 +143,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 150);
+            this.label4.Location = new System.Drawing.Point(13, 191);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 10;
@@ -150,7 +152,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 176);
+            this.label5.Location = new System.Drawing.Point(13, 217);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 11;
@@ -158,7 +160,7 @@
             // 
             // outputArea
             // 
-            this.outputArea.Location = new System.Drawing.Point(70, 147);
+            this.outputArea.Location = new System.Drawing.Point(70, 188);
             this.outputArea.Name = "outputArea";
             this.outputArea.ReadOnly = true;
             this.outputArea.Size = new System.Drawing.Size(100, 20);
@@ -166,7 +168,7 @@
             // 
             // outputPerimeter
             // 
-            this.outputPerimeter.Location = new System.Drawing.Point(70, 173);
+            this.outputPerimeter.Location = new System.Drawing.Point(70, 214);
             this.outputPerimeter.Name = "outputPerimeter";
             this.outputPerimeter.ReadOnly = true;
             this.outputPerimeter.Size = new System.Drawing.Size(100, 20);
@@ -174,7 +176,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(54, 108);
+            this.button3.Location = new System.Drawing.Point(54, 149);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(190, 23);
             this.button3.TabIndex = 14;
@@ -190,7 +192,7 @@
             "m",
             "cm",
             "mm"});
-            this.inputAreaUnit.Location = new System.Drawing.Point(176, 147);
+            this.inputAreaUnit.Location = new System.Drawing.Point(176, 188);
             this.inputAreaUnit.Name = "inputAreaUnit";
             this.inputAreaUnit.Size = new System.Drawing.Size(46, 21);
             this.inputAreaUnit.TabIndex = 15;
@@ -204,7 +206,7 @@
             "m",
             "cm",
             "mm"});
-            this.inputPerimeterUnit.Location = new System.Drawing.Point(176, 172);
+            this.inputPerimeterUnit.Location = new System.Drawing.Point(176, 213);
             this.inputPerimeterUnit.Name = "inputPerimeterUnit";
             this.inputPerimeterUnit.Size = new System.Drawing.Size(46, 21);
             this.inputPerimeterUnit.TabIndex = 16;
@@ -222,17 +224,41 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 236);
+            this.label7.Location = new System.Drawing.Point(12, 254);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(109, 13);
             this.label7.TabIndex = 18;
             this.label7.Text = "-Made by: Alex Wang";
             // 
+            // errorLength
+            // 
+            this.errorLength.AutoSize = true;
+            this.errorLength.ForeColor = System.Drawing.Color.Red;
+            this.errorLength.Location = new System.Drawing.Point(51, 68);
+            this.errorLength.Name = "errorLength";
+            this.errorLength.Size = new System.Drawing.Size(35, 13);
+            this.errorLength.TabIndex = 19;
+            this.errorLength.Text = "label8";
+            this.errorLength.Visible = false;
+            // 
+            // errorWidth
+            // 
+            this.errorWidth.AutoSize = true;
+            this.errorWidth.ForeColor = System.Drawing.Color.Red;
+            this.errorWidth.Location = new System.Drawing.Point(51, 123);
+            this.errorWidth.Name = "errorWidth";
+            this.errorWidth.Size = new System.Drawing.Size(35, 13);
+            this.errorWidth.TabIndex = 19;
+            this.errorWidth.Text = "label8";
+            this.errorWidth.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 261);
+            this.ClientSize = new System.Drawing.Size(291, 276);
+            this.Controls.Add(this.errorWidth);
+            this.Controls.Add(this.errorLength);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.inputPerimeterUnit);
@@ -252,7 +278,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "h";
+            this.Text = "RectangleCalc";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,6 +304,8 @@
         private System.Windows.Forms.ComboBox inputPerimeterUnit;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label errorLength;
+        private System.Windows.Forms.Label errorWidth;
     }
 }
 
