@@ -6,18 +6,44 @@ namespace WindowsFormsApplication3
 {
     public partial class Form1 : Form
     {
-        double rectLength = Double.NaN;
-        double rectWidth = Double.NaN;
+        private double rectLength = Double.NaN;
+        private double rectWidth = Double.NaN;
 
-        double area;
-        double perimeter;
+        private double area;
+        private double perimeter;
 
-        bool calced = false;
+        private bool calced = false;
+
+        // informational messages
+        private String infoInputLength = "Input a non-negative integer for the rectangle length.";
+        private String infoInputWidth = "Input a non-negative integer for the rectangle width.";
+        private String infoOK = "Confirm measurement.";
+        private String infoUnits = "Select a unit of measurement.";
 
         public Form1()
         {
             InitializeComponent();
             this.Text = "RectangleCalc";
+            // Create the ToolTip and associate with the Form container.
+            ToolTip toolTip1 = new ToolTip();
+
+            // Set up the delays for the ToolTip.
+            toolTip1.AutoPopDelay = 5000;
+            toolTip1.InitialDelay = 1000;
+            toolTip1.ReshowDelay = 500;
+            // Force the ToolTip text to be displayed whether or not the form is active.
+            toolTip1.ShowAlways = true;
+
+            // Set up the ToolTip text for the Button and Checkbox.
+            toolTip1.SetToolTip(this.inputLength, infoInputLength);
+            toolTip1.SetToolTip(this.inputWidth, infoInputWidth);
+            toolTip1.SetToolTip(this.inputAreaUnit, infoUnits);
+            toolTip1.SetToolTip(this.inputPerimeterUnit, infoUnits);
+            toolTip1.SetToolTip(this.inputLengthUnit, infoUnits);
+            toolTip1.SetToolTip(this.inputWidthUnit, infoUnits);
+            toolTip1.SetToolTip(this.button1, infoOK);
+            toolTip1.SetToolTip(this.button2, infoOK);
+
         }
 
         // Configure length
