@@ -152,7 +152,6 @@ namespace WindowsFormsApplication3
                 errorWidth.Visible = true;
             }
         }
-
         private bool isString(string text)
         {
             return text.All(Char.IsLetter);
